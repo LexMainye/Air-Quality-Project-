@@ -72,9 +72,6 @@ This structured dataset allows for multi-dimensional analysis including temporal
 
 ---
 
-
----
-
 ### 📈 Dashboard Results (Built with Dash)
 
 The dashboard was developed using the [Dash](https://dash.plotly.com/) framework and provides an **interactive web interface** for visualizing air quality data over a 90-day period across **Nairobi**, **Mombasa**, and **Kisumu**.
