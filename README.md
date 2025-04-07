@@ -103,5 +103,3 @@ The dashboard was developed using the [Dash](https://dash.plotly.com/) framework
 All charts are rendered using **Plotly**, and the dataset is filtered live using **Pandas**, enabling fast and smooth updates based on UI selections.
 
 ---
-
-Would you like me to generate a sample screenshot (mock-up) to show what the dashboard might look like in the README as an image? Or write deployment instructions (`run.py` or `app.py`) + `requirements.txt` next?
