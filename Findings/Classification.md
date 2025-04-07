@@ -750,4 +750,231 @@ All cities show comparable baseline pollution, but **Mombasa's port gives it sli
 
 ### Advanced Anomaly Detection & Pattern Analysis
 
-[View Live Page](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Anomaly%20Detection%20%26%20Pattern%20Analysis/pollution_hotspots.html)
+![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Anomaly%20Detection%20%26%20Pattern%20Analysis/Pollution%20Hotspots.png)
+
+The map plot effectively shows that Nairobi appears to be a air significant pollution hotspot compared to other cities under observation in Kenya.
+
+Nairobi's status as a significant air pollution hotspot compared to Mombasa and Kisumu can be attributed to several interconnected factors:
+
+ 1. **Population Density and Urbanization**
+   - Nairobi is Kenya's most densely populated city (over 4.7 million people in the metro area), leading to higher emissions from:
+     - Vehicular traffic (congestion is severe)
+     - Industrial activity concentrated in the city
+     - Domestic fuel use (charcoal, kerosene)
+   - Mombasa and Kisumu have lower population densities and less industrial concentration.
+
+ 2. **Transportation Emissions**
+   - Nairobi has:
+     - Heavy reliance on older, poorly maintained vehicles (many diesel-powered)
+     - Frequent traffic jams (idling engines increase particulate matter)
+     - Limited public transport infrastructure (leads to more private vehicles)
+   - Mombasa has more maritime transport (less polluting than road traffic), while Kisumu has fewer vehicles overall.
+
+3. **Industrial Activity**
+   - Nairobi hosts Kenya's largest industrial zone (along Mombasa Road and Athi River), including:
+     - Manufacturing plants
+     - Construction material production (cement, steel)
+     - Informal sector activities (e.g., metal recycling)
+   - Mombasa's industry is more port-focused, and Kisumu has lighter industry.
+
+ 4. **Geographical and Meteorological Factors**
+   - Nairobi's **high altitude (~1,800m)** reduces air dispersion, trapping pollutants.
+   - The city sits in a **valley**, limiting wind circulation that could disperse pollution.
+   - Mombasa's coastal location benefits from sea breezes that disperse pollutants.
+   - Kisumu's proximity to Lake Victoria also allows for better air mixing.
+
+5. **Energy and Fuel Use**
+   - **Nairobi:**
+     - Heavy use of diesel generators during power outages
+     - Widespread charcoal burning in informal settlements
+     - Industrial reliance on heavy fuel oils
+   - **Mombasa/Kisumu:**
+     - More access to cleaner energy (e.g., Mombasa's proximity to the Kipevu power plant)
+     - Less reliance on backup generators
+
+ 6. **Construction and Dust**
+   - Nairobi's rapid construction boom generates significant dust (PM2.5/PM10).
+   - Unpaved roads in informal settlements exacerbate particulate pollution.
+   - Mombasa and Kisumu have slower construction growth.
+
+7. **Waste Burning**
+   - Open burning of waste is common in Nairobi's informal settlements (Dandora, Kibera).
+   - Mombasa and Kisumu have smaller-scale waste disposal issues.
+
+8. **Policy and Enforcement Gaps**
+   - Nairobi's pollution regulations are poorly enforced (e.g., vehicle emissions testing).
+   - County governments in Mombasa and Kisumu may have better localized controls.
+
+Mitigation Insights:
+To reduce Nairobi's pollution, priorities could include:
+- Upgrading public transport (e.g., BRT systems)
+- Stricter vehicle emissions standards
+- Promoting cleaner industrial technologies
+- Expanding green spaces to improve air circulation.
+
+Mombasa and Kisumu's relatively lower pollution levels highlight how coastal/breeze-accessible cities can benefit from natural dispersion, but they may face future risks if industrialization grows unchecked.
+
+---
+
+### Multivariate Outlier Detection
+
+|               | Anomaly (-1) | Anomaly (1) | Total |
+|---------------|--------------|-------------|-------|
+| **Not Noise** | 22           | 5900        | 5922  |
+| **Noise**     | 99           | 27          | 126   |
+| **Total**     | 121          | 5927        | 6048  |
+
+- Most normal cases (5900) are correctly identified as anomaly=1
+- Noise is more common in the anomaly=-1 group (99 vs 27)
+
+  ---
+
+  ### Pollutant Interactions Graph
+
+![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Anomaly%20Detection%20%26%20Pattern%20Analysis/Pollutant%20Interactions%20Graph.png)
+
+ **Interpreting Pollutant Interaction Network During Extreme Air Quality Events**
+
+**1. Graph Structure & Key Findings**
+The network diagram visualizes **strong correlations (r > 0.7)** between pollutants during extreme pollution days (DBSCAN Cluster -1). Line thickness represents correlation strength.
+
+**Dominant Interactions**:  
+1. **CO as the Hub**:  
+   - Strongest ties to PM₂.₅ (r=0.91), PM₁₀ (r=0.91), NO (r=0.82), and NO₂ (r=0.74).  
+   - *Interpretation*: CO spikes signal **combustion events** (burning, traffic, industry).  
+
+2. **PM₂.₅-PM₁₀ Bond (r=0.97)**:  
+   - Near-perfect correlation → Fine and coarse particles share common sources.  
+
+3. **NO-NO₂-CO Triangle**:  
+   - NO/NO₂ correlations with CO (r=0.74–0.82) → **Traffic/fuel combustion fingerprint**.  
+
+ **2. Kenyan Context for These Correlations**
+
+**A. CO-Linked Patterns**  
+
+| Correlation | Kenyan Scenario | Example Locations |
+|-------------|-----------------|-------------------|
+| **CO ↔ PM₂.₅ (0.91)** | Biomass burning | Kibos (Kisumu), Kibera (Nairobi) |
+| **CO ↔ NO (0.82)** | Matatu/truck exhaust | Thika Road (Nairobi), Likoni Ferry (Mombasa) |
+| **CO ↔ PM₁₀ (0.91)** | Construction + burning | Athi River, Mlolongo industrial zones |
+
+**B. Particulate Matter**  
+- **PM₂.₅ ↔ PM₁₀ (0.97)**:  
+  - Shared sources:  
+    - **Urban**: Vehicle brake/tire wear (Nairobi CBD).  
+    - **Rural**: Agricultural tilling + savanna fires (Narok).  
+
+**C. Nitrogen Oxides**  
+- **NO ↔ NO₂ (via CO)**:  
+  - **Traffic hotspots**:  
+    - Mombasa port truck queues.  
+    - Nairobi’s Globe Roundabout.  
+
+
+ **3. Policy Implications**
+
+**Nairobi-Specific**  
+- **Targeted Measures**:  
+  - **Thika Road**: Enforce Euro 5 standards for trucks.  
+  - **Industrial Area**: Mandate CO scrubbers in factories.  
+
+**Mombasa-Specific**  
+- **Port Actions**:  
+  - Replace diesel forklifts with electric models.  
+  - Real-time NO₂ monitoring at KPA gates.  
+
+**Kisumu-Specific**  
+- **Agricultural Controls**:  
+  - Promote non-burning sugarcane harvesting.  
+  - Penalize nighttime field burning.  
+
+---
+
+ **4. Scientific Insights**  
+
+- **Combustion Signature**: High CO-PM₂.₅-NOₓ correlations confirm **incomplete fuel burning** dominates extremes.  
+- **Traffic vs. Industry**:  
+  - **NO-dominant**: Traffic (matatus, trucks).  
+  - **CO-dominant**: Industry/waste burning.  
+
+ **Conclusion**  
+1. **CO is the keystone pollutant** during extremes → it should be monitored closely.  
+2. **PM₂.₅-PM₁₀ pairing** demands integrated dust/fire controls.  
+3. **City-specific strategies** should break these correlation chains.
+
+---
+
+### AUC Score
+
+I found a Sensor fault AUC: 1.00 indicating a good sense of fault prediction.
+
+---
+
+### SHAP Value plot 
+
+![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Anomaly%20Detection%20%26%20Pattern%20Analysis/SHAP%20Value%20Plot.png)
+
+**Interpreting the SHAP Value Plot**
+
+**1. What the Plot Shows**
+
+This horizontal bar chart visualizes the **importance and directional impact** of each feature (pollutant) on your air quality model's predictions, using SHAP (SHapley Additive exPlanations) values:
+- **Y-axis**: Features (pollutants) ordered by importance.  
+- **X-axis**: SHAP value → How much each feature *pushes* predictions higher (positive) or lower (negative).  
+- **Bar Length**: Magnitude of impact.  
+- **Color**: Likely represents feature value (red = high concentration, blue = low).  
+
+---
+
+**2. Key Insights for Kenyan Air Quality**
+
+**Top Influential Pollutants**  
+
+1. **Feature 4 (Likely PM₂.₅)**:  
+   - **Strong positive impact** (long right bar).  
+   - *Interpretation*: High PM₂.₅ levels drastically worsen predicted AQI.  
+   - *Kenya Context*: Matches construction dust (Athi River).  
+
+2. **Feature 1 (Likely CO)**:  
+   - **Moderate positive impact**.  
+   - *Interpretation*: CO spikes from traffic/industry raise AQI predictions.  
+   - *Kenya Context*: Matatu congestion (Nairobi CBD), waste burning (Dandora).  
+
+3. **Feature 6 (Possibly O₃)**:  
+   - **Negative impact** (left bar).  
+   - *Interpretation*: High O₃ sometimes lowers AQI predictions (due to NOx titration in cities).  
+   - *Kenya Context*: Sunny days in Karen (low NOx) vs. industrial zones (high NOx).  
+
+ **Less Important Features**  
+- **Feature 0/7 (e.g., NH₃, SO₂)**:  
+  - Minimal impact → Less critical for AQI predictions in your model.  
+
+---
+
+**3. Policy Implications**  
+
+**Prioritize Reducing Top Pollutants**  
+1. **PM₂.₅ (Feature 4)**:  
+   - **Nairobi**: Enforce dust control at construction sites.  
+   - **Kisumu**: Ban sugarcane field burning.  
+
+2. **CO (Feature 1)**:  
+   - **Mombasa**: Retrofit port trucks to Euro 6 standards.  
+   - **Nairobi**: Phase out charcoal stoves in informal settlements.  
+   
+ **Monitor O₃ (Feature 6) Paradox**  
+- **Action**: Deploy more NOx sensors in high-O₃ suburbs (e.g., Karen, Runda).  
+---
+ **4. Scientific Validation**  
+- **PM₂.₅ Dominance**: Confirms global findings on its health impacts.  
+- **CO-O₃ Tradeoff**: Reflects Kenya’s unique mix of traffic and industrial sources.  
+---
+
+**Conclusion**  
+This plot reveals:  
+1. **PM₂.₅ and CO are Kenya’s top AQI drivers**.  
+2. **O₃ has complex effects** depending on location.  
+3. **Targeted reductions in PM₂.₅/CO** will most improve air quality.  
+
+
