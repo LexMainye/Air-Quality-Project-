@@ -1,6 +1,4 @@
-Here is the updated `README.md` without emojis:
 
-```markdown
 # Air Quality Analysis and Dashboard for Nairobi, Mombasa, and Kisumu
 
 ## Project Overview
@@ -96,7 +94,7 @@ The analysis and visualizations were carried out interactively in a **Jupyter No
 
 1. Clone the repo:
     ```bash
-    git clone https://github.com/yourusername/air-quality-kenya.git
+    git clone https://github.com/LexMainye/air-quality-Project.git
     cd air-quality-kenya
     ```
 
@@ -107,7 +105,7 @@ The analysis and visualizations were carried out interactively in a **Jupyter No
 
 3. Open the notebook:
     ```bash
-    jupyter notebook air_quality_analysis.ipynb
+    jupyter notebook Air_quality_project 🇰🇪.ipynb
     ```
 
 ---
