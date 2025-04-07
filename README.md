@@ -758,7 +758,7 @@ An eps value of 0.5 to 1.0 should capture the dense regions as clusters, but poi
 
 ### DBSCAN Clustering Plot
 
-![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Clustering%20%26%20Clustering%20Techniques/DBSCAN%20Clustering%20for%20Air%20Quality%20Data.png)
+![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/cb3a6d0016ec11fed5d4e74077fbb8e954296730/Clustering%20%26%20Clustering%20Techniques/DBSCAN%20Clustering%20plot.png)
 
 **Interpretation**
 
