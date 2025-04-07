@@ -18,7 +18,7 @@ The project was carried out in a Jupyter Notebook, which was rendered for intera
 
 ---
 
-## Dashboard Visualization (Rendered in Jupyter Notebook)
+## Dashboard Visualization (Rendered in Google Colab Notebook)
 
 I built an **interactive dashboard** using `Dash`:
 - Select city, month, and date range
