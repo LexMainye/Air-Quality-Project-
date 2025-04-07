@@ -72,7 +72,7 @@ The analysis and visualizations were carried out interactively in a **Jupyter No
 
 3. Open the notebook:
     ```bash
-    jupyter notebook air-quality-Project.ipynb
+    jupyter notebook Air_quality_project_🇰🇪.ipynb
     ```
 
 ---
