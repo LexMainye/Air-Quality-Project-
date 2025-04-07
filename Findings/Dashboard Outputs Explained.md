@@ -28,40 +28,13 @@ The dashboard was developed using the [Dash](https://dash.plotly.com/) framework
    - Plots daily **average**, **minimum**, and **maximum** pollutant levels using a line+fill chart.
    - Provides a detailed view of pollutant fluctuation and outliers over time.
    - Helps determine how volatile or stable air quality is in a specific city.
-
 ---
-
-### 🔍 Behind the Scenes (Code Overview)
-
-- The dashboard uses `dcc.Dropdown`, `dcc.DatePickerRange`, and `dcc.Graph` from Dash Core Components.
-- Three Dash `@callback`s are used to update the visuals based on user input:
-  1. `update_graph()` → updates multi-line time series chart of pollutants
-  2. `update_monthly_comparison()` → updates the monthly bar chart per pollutant
-  3. `update_pollutant_trend()` → shows trend analysis with daily mean, min, max
-
-```python
-@app.callback(
-    Output('pollution-graph', 'figure'),
-    [Input('city-dropdown', 'value'),
-     Input('month-dropdown', 'value'),
-     Input('date-range', 'start_date'),
-     Input('date-range', 'end_date')]
-)
-# ... Updates daily view with multiple pollutants
-```
-
-All charts are rendered using **Plotly**, and the dataset is filtered live using **Pandas**, enabling fast and smooth updates based on UI selections.
-
----
-
 # Dash board Chart Outputs for Each City
 
 
-## Nairobi.
+## Nairobi. 
 
-January 2025 
-
-Air Quality Results:  
+### Air Quality Results:  
 
 | Month    | Plot |
 |----------|------|
@@ -70,9 +43,35 @@ Air Quality Results:
 | March    | ![March](https://github.com/LexMainye/Air-Quality-Project-/blob/796034ef69a4060de4901341553e889f0cbe9c23/Nairobi/Air%20Quality%20Data/March%20Air%20Quality%20Data.png) |
 | Early April    | ![April](https://github.com/LexMainye/Air-Quality-Project-/blob/796034ef69a4060de4901341553e889f0cbe9c23/Nairobi/Air%20Quality%20Data/April%20Air%20Quality%20Data%20.png) |
 
-Air pollutant types, monthly average levels plots, and trends plots for the month of January 2025:  
+**Explanation:** 
 
-| Pollutant (μg/m³)                     | Monthly Average Levels (January 2025) | Trends (January 2025)       |
+- For the daily air pollution levels plots, carbon monoxide `co` appears to be the dominant pollutant compared to the other pollutants that appear to be in lower concentrations, March records the highest spike in `CO` reaching levels of about `~ 4,000 μg/m³`.
+
+**Potential Causes of high CO levels in Nairobi**
+1. **Vehicular Emissions** (Traffic, old cars, motorcycles)  
+2. **Industrial Activities** (Factories, power plants, informal workshops)  
+3. **Domestic Fuel Use** (Charcoal, firewood, kerosene stoves)  
+4. **Geographic/Meteorological Traps** (Valley effect, temperature inversions)  
+5. **Waste Burning** (Open garbage burning)  
+6. **Construction Equipment** (Diesel generators, machinery)
+
+**Recommended Mitigation strategies**
+1. Strict vehicle emissions testing  
+2. Promote electric/hybrid vehicles  
+3. Improve public transport (BRT, cycling lanes)  
+4. Phase out old, polluting vehicles  
+5. Enforce industrial emission controls  
+6. Switch factories to cleaner energy (solar/LPG)  
+7. Ban open waste burning  
+8. Subsidize clean cooking fuels (LPG/electric stoves)  
+9. Public awareness campaigns on CO dangers  
+10. Expand air quality monitoring network  
+11. Increase urban green spaces  
+12. Strict enforcement of anti-pollution laws
+    
+### Air pollutant types, monthly average levels plots, and trends plots for the month of January 2025:  
+
+| Pollutant (μg/m³)                     | Monthly Average Levels  | Trends        |
 |---------------------------------------|------------------------------------|--------------------------|
 | **co** (Carbon Monoxide)              |![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/bc040a68b7326e638e6a8c45249055e433ae29fc/Nairobi/Monthly%20Average%20Analysis/Monthly%20Average%20CO%20levels%20in%20Nairobi.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/bc040a68b7326e638e6a8c45249055e433ae29fc/Nairobi/Trends/CO%20Trend%20Nairobi.png) |
 | **no** (Nitric Oxide)                 |![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/bc040a68b7326e638e6a8c45249055e433ae29fc/Nairobi/Monthly%20Average%20Analysis/NO%20Average%20Monthly%20Trend.png)                     | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/bc040a68b7326e638e6a8c45249055e433ae29fc/Nairobi/Trends/NO%20Trend.png) |
@@ -84,4 +83,28 @@ Air pollutant types, monthly average levels plots, and trends plots for the mont
 | **nh3** (Ammonia)                     | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/bc040a68b7326e638e6a8c45249055e433ae29fc/Nairobi/Monthly%20Average%20Analysis/nh3%20monthly%20average%20trend.png)                   | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/bc040a68b7326e638e6a8c45249055e433ae29fc/Nairobi/Trends/nh3%20trend%20.png) |
 
 
+**Mombasa**
+### Air Quality Results:  
 
+| Month    | Plot |
+|----------|------|
+| January  | ![January](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Air%20Quality%20Data/January%20Air%20Quality%20Data.png) |
+| February | ![February](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Air%20Quality%20Data/February%20Air%20Quality%20Data.png) |
+| March    | ![March](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Air%20Quality%20Data/March%20Air%20Quality%20Data.png) |
+| Early April    | ![April](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Air%20Quality%20Data/April%20Air%20Quality%20Data.png) |
+
+
+### Air pollutant types, monthly average levels plots, and trends plots for the month of January 2025:  
+
+| Pollutant (μg/m³)                     | Monthly Average Levels  | Trends        |
+|---------------------------------------|------------------------------------|--------------------------|
+| **co** (Carbon Monoxide)              |![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Monthly%20Average%20Levels/monthly%20average%20co%20lvls.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Trends/co%20trends.png) |
+| **no** (Nitric Oxide)                 |![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Monthly%20Average%20Levels/monthly%20avg%20no%20lvls.png)                     | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Trends/no%20trend.png) |
+| **no2** (Nitrogen Dioxide)            | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Monthly%20Average%20Levels/monthly%20average%20no2%20lvls.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Trends/no2%20trend.png) |
+| **o3** (Ozone)                        | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Monthly%20Average%20Levels/03%20monthly%20avg%20lvls.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Trends/03%20trend.png)|
+| **so2** (Sulfur Dioxide)              | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Monthly%20Average%20Levels/so2%20monthly%20avg%20lvls.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Trends/so2%20trend.png)|
+| **pm2_5** (Fine Particulate Matter)   | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Monthly%20Average%20Levels/pm2_5%20monthly%20avg%20lvls.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Trends/pm2_5%20trend.png) |
+| **pm10** (Coarse Particulate Matter)  | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Monthly%20Average%20Levels/pm10%20monthly%20average%20levels%20.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Trends/pm10%20trend.png) |
+| **nh3** (Ammonia)                     | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Monthly%20Average%20Levels/nh3%20monthly%20avg%20lvls%20.png)                    |  ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Trends/nh3%20trend.png) |
+
+  
