@@ -69,7 +69,7 @@ The dashboard was developed using the [Dash](https://dash.plotly.com/) framework
 11. Increase urban green spaces  
 12. Strict enforcement of anti-pollution laws
     
-### Air pollutant types, monthly average levels plots, and trends plots for the month of January 2025:  
+### Air pollutant types, monthly average levels plots, and trends plots for Jan to Early Apr 2025  
 
 | Pollutant (μg/m³)                     | Monthly Average Levels  | Trends        |
 |---------------------------------------|------------------------------------|--------------------------|
@@ -82,8 +82,9 @@ The dashboard was developed using the [Dash](https://dash.plotly.com/) framework
 | **pm10** (Coarse Particulate Matter)  | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/bc040a68b7326e638e6a8c45249055e433ae29fc/Nairobi/Monthly%20Average%20Analysis/pm10%20avg%20lvls%20nbo.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/bc040a68b7326e638e6a8c45249055e433ae29fc/Nairobi/Trends/pm10%20trend%20nbo.png) |
 | **nh3** (Ammonia)                     | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/bc040a68b7326e638e6a8c45249055e433ae29fc/Nairobi/Monthly%20Average%20Analysis/nh3%20monthly%20average%20trend.png)                   | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/bc040a68b7326e638e6a8c45249055e433ae29fc/Nairobi/Trends/nh3%20trend%20.png) |
 
+---
 
-**Mombasa**
+### Mombasa
 ### Air Quality Results:  
 
 | Month    | Plot |
@@ -94,7 +95,7 @@ The dashboard was developed using the [Dash](https://dash.plotly.com/) framework
 | Early April    | ![April](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Air%20Quality%20Data/April%20Air%20Quality%20Data.png) |
 
 
-### Air pollutant types, monthly average levels plots, and trends plots for the month of January 2025:  
+### Air pollutant types, monthly average levels plots, and trends plot for Jan to Early Apr 2025:  
 
 | Pollutant (μg/m³)                     | Monthly Average Levels  | Trends        |
 |---------------------------------------|------------------------------------|--------------------------|
@@ -107,4 +108,31 @@ The dashboard was developed using the [Dash](https://dash.plotly.com/) framework
 | **pm10** (Coarse Particulate Matter)  | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Monthly%20Average%20Levels/pm10%20monthly%20average%20levels%20.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Trends/pm10%20trend.png) |
 | **nh3** (Ammonia)                     | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Monthly%20Average%20Levels/nh3%20monthly%20avg%20lvls%20.png)                    |  ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/7ca71ba9562f1e257de74cfbc6d88c38845e03ef/Mombasa/Trends/nh3%20trend.png) |
 
-  
+---
+### Kisumu 
+### Air Quality Results:  
+
+| Month    | Plot |
+|----------|------|
+| January  | ![January](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Air%20Quality%20Data/January%20Air%20Quality%20Data.png) |
+| February | ![February](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Air%20Quality%20Data/February%20Air%20Quality%20Data.png) |
+| March    | ![March](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Air%20Quality%20Data/March%20Air%20Quality%20Data.png) |
+| Early April    | ![April](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Air%20Quality%20Data/April%20Air%20Quality%20Data.png) |
+
+
+### Air pollutant types, monthly average levels plots, and trends plot for Jan to Early Apr 2025:  
+
+| Pollutant (μg/m³)                     | Monthly Average Levels  | Trends        |
+|---------------------------------------|------------------------------------|--------------------------|
+| **co** (Carbon Monoxide)              |![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Monthly%20Average/co%20monthly%20avg%20lvls.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Trends/co%20trend.png) |
+| **no** (Nitric Oxide)                 |![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Monthly%20Average/no%20monthly%20avg%20lvls.png)                     | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Trends/No%20trend.png) |
+| **no2** (Nitrogen Dioxide)            | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Monthly%20Average/no2%20monthly%20average%20trends.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Trends/no2%20trend.png) |
+| **o3** (Ozone)                        | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Monthly%20Average/03%20monthly%20avg%20lvls.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Trends/03%20trends.png)|
+| **so2** (Sulfur Dioxide)              | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Monthly%20Average/so2%20monthly%20avg%20trend.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Trends/so2%20trend.png)|
+| **pm2_5** (Fine Particulate Matter)   | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Monthly%20Average/pm2_5%20monthly%20avg%20lvl.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Trends/pm2_5%20trend.png) |
+| **pm10** (Coarse Particulate Matter)  | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Monthly%20Average/pm10%20monthly%20avg%20lvls.png)                    | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Trends/pm10%20trend.png) |
+| **nh3** (Ammonia)                     | ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Monthly%20Average/nh3%20monthly%20avg%20lvls.png)                    |  ![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Kisumu/Trends/nh3%20trend.png) |
+
+
+
+
