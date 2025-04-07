@@ -4,32 +4,6 @@
 ## Project Overview
 This project focuses on the **analysis and visualization of air quality data** for three major Kenyan cities: **Nairobi**, **Mombasa**, and **Kisumu**. Using real-time data from the **OpenWeather API**, we explore pollution trends, conduct statistical and machine learning analysis, and create an interactive **Dash** web dashboard.
 
----
-
-## Data Collection
-
-### Source: [OpenWeather Air Pollution API](https://openweathermap.org/api/air-pollution)
-- The dataset contains **90 days** of hourly air quality data.
-- Cities Queried: `Nairobi`, `Mombasa`, and `Kisumu`
-- Each record includes pollutants like `CO`, `NO`, `NO2`, `O3`, `SO2`, `PM2.5`, `PM10`, and `NH3`.
-
-### Time Handling
-- The `dt` column (UNIX timestamp) was **converted into datetime format** for easier analysis and filtering:
-```python
-import pandas as pd
-df['dt'] = pd.to_datetime(df['dt'], unit='s')
-```
-
-### Dataset Structure
-```python
-df.info()
-# Output:
-# Columns: dt, city, main.aqi, co, no, no2, o3, so2, pm2_5, pm10, nh3
-# Rows: 6048 entries (3 cities × 90 days × hourly data)
-```
-
----
-
 ## Jupyter Notebook Analysis
 
 The project was carried out in a Jupyter Notebook, which was rendered for interactive exploration and analysis. The following key components were analyzed:
@@ -67,7 +41,7 @@ I built an **interactive dashboard** using `Dash`:
 - Helped identify peak pollution hours and typical pollutant profiles per city
 
 ### 3. Anomaly Detection
-- Used ** Multivariate Outlier Detection ** and **AUC Score** methods
+- Used **Multivariate Outlier Detection** and **AUC Score** methods
 - Detected unusual spikes in pollutants like `PM₂.₅` and `CO` linked to industrial or traffic events
 
 ---
@@ -144,17 +118,32 @@ The city serves as the capital of Kisumu County.
 
 ---
 
-### Data Collection
+## Data Collection
 
-The air quality data was retrieved via the OpenWeather API's Air Pollution endpoints. API requests were made for each of the three cities — **Kisumu**, **Mombasa**, and **Nairobi** — — over a span of 90 consecutive days.
+### Source: [OpenWeather Air Pollution API](https://openweathermap.org/api/air-pollution)
+- The dataset contains **90 days** of hourly air quality data.
+- Cities Queried: `Nairobi`, `Mombasa`, and `Kisumu`
+- Each record includes pollutants like `CO`, `NO`, `NO2`, `O3`, `SO2`, `PM2.5`, `PM10`, and `NH3`.
 
-Each response from the API includes the air quality data structured with various pollutant concentrations and the computed AQI. The collected data was stored in a pandas DataFrame for further analysis.
+### Time Handling
+- The `dt` column (UNIX timestamp) was **converted into datetime format** for easier analysis and filtering:
+```python
+import pandas as pd
+df['dt'] = pd.to_datetime(df['dt'], unit='s')
+```
 
+### Dataset Structure
+```python
+df.info()
+# Output:
+# Columns: dt, city, main.aqi, co, no, no2, o3, so2, pm2_5, pm10, nh3
+# Rows: 6048 entries (3 cities × 90 days × hourly data)
+```
 ---
 
 ### Dataset Overview
 
-The dataset contains **6048 records** with the following columns:
+The [dataset](https://github.com/LexMainye/Air-Quality-Project-/blob/main/Air%20Data/pollution_data.csv) contains **6048 records** with the following columns:
 
 | Column     | Description |
 |------------|-------------|
