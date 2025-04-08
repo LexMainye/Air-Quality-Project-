@@ -203,6 +203,15 @@ The dashboard was developed using the [Dash](https://dash.plotly.com/) framework
    - Plots daily **average**, **minimum**, and **maximum** pollutant levels using a line+fill chart.
    - Provides a detailed view of pollutant fluctuation and outliers over time.
    - Helps determine how volatile or stable air quality is in a specific city.
+
+> Dashboard Screenshots
+
+![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/c9bbba82c0d0f9b8f9923a182b676f59c31b96a8/Dashboard/Screen%20Shot%202025-04-07%20at%2012.10.48%20PM.png)
+
+![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/c9bbba82c0d0f9b8f9923a182b676f59c31b96a8/Dashboard/Screen%20Shot%202025-04-07%20at%2012.55.41%20PM.png)
+
+![image alt](https://github.com/LexMainye/Air-Quality-Project-/blob/c9bbba82c0d0f9b8f9923a182b676f59c31b96a8/Dashboard/Screen%20Shot%202025-04-07%20at%2012.56.34%20PM.png)
+
    
 ---
 # Dash board Chart Outputs for Each City
