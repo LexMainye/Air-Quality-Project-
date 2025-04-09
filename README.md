@@ -53,7 +53,7 @@ I built an **interactive dashboard** using `Dash`:
 ---
 
 ## Technologies Used
-- **Google Colab Notebook **: For interactive analysis and visualization
+- **Google Colab Notebook**: For interactive analysis and visualization
 - **Dash / Plotly**: Dashboard and data visualization
 - **Pandas / NumPy**: Data processing and transformation
 - **Scikit-learn**: Machine learning algorithms
