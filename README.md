@@ -4,7 +4,7 @@
 ## Project Overview
 This project focuses on the **analysis and visualization of air quality data** for three major Kenyan cities: **Nairobi**, **Mombasa**, and **Kisumu**. Using real-time data from the **OpenWeather API**, we explore pollution trends, conduct statistical and machine learning analysis, and create an interactive **Dash** web dashboard.
 
-## Jupyter Notebook Analysis
+## Google Colab Notebook Analysis
 
 The project was carried out in a Jupyter Notebook, which was rendered for interactive exploration and analysis. The following key components were analyzed:
 
