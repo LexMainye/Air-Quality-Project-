@@ -1,6 +1,10 @@
 
 ##  Air Quality Monitoring in Kenyan Cities 🏙 🇰🇪
 
+[![Nairobi](https://img.shields.io/badge/OpenWeather-Nairobi-informational?style=flat&logo=openweathermap&logoColor=white)](https://openweathermap.org/city/184745)  
+[![Mombasa](https://img.shields.io/badge/OpenWeather-Mombasa-informational?style=flat&logo=openweathermap&logoColor=white)](https://openweathermap.org/city/186301)  
+[![Kisumu](https://img.shields.io/badge/OpenWeather-Kisumu-informational?style=flat&logo=openweathermap&logoColor=white)](https://openweathermap.org/city/191220)  
+
 ## Project Overview
 This project focuses on the **analysis and visualization of air quality data** for three major Kenyan cities: **Nairobi**, **Mombasa**, and **Kisumu**. Using real-time data from the **OpenWeather API**, we explore pollution trends, conduct statistical and machine learning analysis, and create an interactive **Dash** web dashboard.
 
